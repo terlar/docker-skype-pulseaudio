@@ -28,8 +28,8 @@ RUN dpkg --add-architecture i386 \
 	&& echo enable-shm=no >> /etc/pulse/client.conf
 
 # PulseAudio server.
-ENV PULSE_SERVER=/run/pulse/native
-ENV PULSE_LATENCY_MSEC=30
+ENV PULSE_SERVER /run/pulse/native
+ENV PULSE_LATENCY_MSEC 30
 
 COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
