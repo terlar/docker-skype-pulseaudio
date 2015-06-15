@@ -29,7 +29,6 @@ RUN dpkg --add-architecture i386 \
 
 # PulseAudio server.
 ENV PULSE_SERVER /run/pulse/native
-ENV PULSE_LATENCY_MSEC 30
 
 COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
