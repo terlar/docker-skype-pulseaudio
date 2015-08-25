@@ -15,6 +15,7 @@ if [ "$1" = 'skype' ]; then
 		adduser --uid ${USER_UID} --gid ${USER_GID} \
 			--disabled-login \
 			--gecos 'Skype' skype
+                adduser skype video
 	fi
 
 	exec su skype -c "$@"
